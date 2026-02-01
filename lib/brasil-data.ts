@@ -50,7 +50,7 @@ export const historicalData: YearData[] = [
   { year: 2021, cambioReal: 5.39, energia: 125, alimentos: 145, minerios: 175, industria: 86, reservas: 362, exportMateriaPrima: 84, exportIndustrializado: 16, importInsumos: 77, importConsumo: 13, exportTotal: 281 },
   { year: 2022, cambioReal: 5.17, energia: 145, alimentos: 155, minerios: 145, industria: 88, reservas: 325, exportMateriaPrima: 85, exportIndustrializado: 15, importInsumos: 77, importConsumo: 13, exportTotal: 335 },
   { year: 2023, cambioReal: 4.97, energia: 135, alimentos: 142, minerios: 125, industria: 87, reservas: 355, exportMateriaPrima: 85, exportIndustrializado: 15, importInsumos: 77, importConsumo: 13, exportTotal: 340 },
-  { year: 2024, cambioReal: 5.05, energia: 138, alimentos: 148, minerios: 132, industria: 89, reservas: 360, exportMateriaPrima: 85, exportIndustrializado: 15, importInsumos: 77, importConsumo: 13, exportTotal: 348 },
+  { year: 2024, cambioReal: 5.70, energia: 138, alimentos: 148, minerios: 132, industria: 89, reservas: 355, exportMateriaPrima: 85, exportIndustrializado: 15, importInsumos: 77, importConsumo: 13, exportTotal: 337 },
 ]
 
 // Base values for normalization (2010 = 100)
@@ -246,7 +246,7 @@ export const countryDetailData: CountryDetailData[] = [
       { year: 2018, cambioReal: 3.65, cambioSimulado: 1.85 },
       { year: 2020, cambioReal: 5.16, cambioSimulado: 1.45 },
       { year: 2022, cambioReal: 5.17, cambioSimulado: 1.25 },
-      { year: 2024, cambioReal: 5.15, cambioSimulado: 1.35 },
+      { year: 2024, cambioReal: 5.70, cambioSimulado: 1.30 },
     ],
     perdaEstimada: 125,
     pibNominal: 2.17
@@ -1032,17 +1032,18 @@ export const techDependencyData: TechDependencyData[] = [
     producaoNacional: 7.7,
     emprego: 5800,
     principaisSupridores: [
-      { pais: 'Rusia', percentual: 55 },
+      { pais: 'Rússia', percentual: 23 },
       { pais: 'China', percentual: 18 },
-      { pais: 'Marrocos', percentual: 12 },
-      { pais: 'Canadá', percentual: 8 },
-      { pais: 'Outros', percentual: 7 }
+      { pais: 'Canadá', percentual: 15 },
+      { pais: 'Marrocos', percentual: 14 },
+      { pais: 'Belarus', percentual: 10 },
+      { pais: 'Outros', percentual: 20 }
     ],
     nivelRisco: 'crítico',
     metricas: {
-      'Nitrogênio Importado': '95%',
-      'Fósforo Importado': '75%',
-      'Potássio Importado': '91%',
+      'Nitrogênio Importado': '77%',
+      'Fósforo Importado': '55%',
+      'Potássio Importado': '97%',
       'Demanda Anual': '45 milhões toneladas'
     }
   }

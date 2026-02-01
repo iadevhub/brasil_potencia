@@ -56,8 +56,9 @@ export function formatarDadosHistoricos(ano: number): DadosDashboard | null {
 
   const cambioSimulado = baseValues.cambioBase / (icbReal / 100) // CORRIGIDO: cálculo real
 
-  // Perda Brasil: estimativa baseada em exportTotal e diferença cambial
-  const perdaBrasil = dados.exportTotal * (dados.exportMateriaPrima / 100) * 0.03 // 3% do valor de commodities
+  // Perda Brasil: custo de oportunidade por não industrializar (fator 3x = valor potencial - valor atual)
+  const valorMateriaPrima = dados.exportTotal * (dados.exportMateriaPrima / 100)
+  const perdaBrasil = valorMateriaPrima * 3 // Produtos manufaturados valem 4x mais, então perda = valor × 3
 
   const setores: DadosPorSetor[] = [
     {

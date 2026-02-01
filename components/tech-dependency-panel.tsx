@@ -195,7 +195,7 @@ function RiskMatrix() {
               <Badge variant="destructive">RISCO CRÍTICO</Badge>
             </div>
             <ul className="text-sm text-muted-foreground space-y-1">
-              <li>• 55% do potássio vem da Rússia (guerra na Ucrânia)</li>
+              <li>• 97% do potássio e 77% do nitrogênio são importados</li>
               <li>• Interrupção = queda de 30-50% na produção agrícola</li>
               <li>• Agronegócio = 25% do PIB brasileiro</li>
             </ul>
