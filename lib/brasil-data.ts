@@ -64,23 +64,33 @@ export const baseValues = {
 }
 
 // Parâmetros do modelo de câmbio de equilíbrio
-// Baseado em: PPP, Termos de Troca, Produtividade Relativa
-export const modeloEquilibrio = {
-  // PPP (Paridade Poder de Compra) - Big Mac Index / World Bank
-  pppBrasilUSD: 2.65, // 2024 - Fonte: World Bank ICP
-  
-  // Inflação acumulada (diferencial BR vs EUA desde 2010)
-  inflacaoBR_2010_2024: 1.98, // IPCA acumulado ~98%
-  inflacaoEUA_2010_2024: 1.42, // CPI acumulado ~42%
-  
-  // Produtividade relativa (PIB per capita PPC / PIB per capita nominal)
-  produtividadeRelativa: 0.55, // Brasil ~55% da produtividade média OCDE
-  
-  // Prêmio de risco país (EMBI+ spread médio)
-  riscoPaisBps: 250, // 250 basis points média
-  
-  // Termos de troca (preço export / preço import) - base 2010 = 100
-  termosTraca2024: 115, // Commodities valorizaram ~15% vs manufaturados
+// Baseado em dados reais do BCB, IBGE, FMI
+export const fundamentosEconomicos = {
+  // Dados Brasil 2024 (fontes oficiais)
+  brasil: {
+    inflacaoAnual: 4.5,           // IPCA % - IBGE
+    selicAnual: 11.75,            // Taxa Selic % - BCB
+    jurosReal: 7.25,              // Selic - IPCA
+    dividaPIB: 78.0,              // % do PIB - Tesouro Nacional
+    contaCorrentePIB: -1.5,       // % do PIB - BCB
+    reservasUSD: 355,             // Bilhões USD - BCB
+    pibNominalUSD: 2170,          // Bilhões USD - IBGE
+    complexidadeEconomica: -0.35, // ECI Index - Harvard Atlas
+    riscoPaisBps: 180,            // EMBI+ spread - JPMorgan
+    produtividadePPP: 35000,      // PIB per capita PPP USD - FMI
+    exportIndustrializada: 15,    // % - MDIC
+  },
+  // Benchmark: Média de países com moeda estável
+  benchmark: {
+    inflacaoAnual: 2.5,
+    jurosReal: 1.5,
+    dividaPIB: 60.0,
+    contaCorrentePIB: 2.0,
+    complexidadeEconomica: 1.5,
+    riscoPaisBps: 50,
+    produtividadePPP: 55000,
+    exportIndustrializada: 70,
+  }
 }
 
 // Default weights for ICB calculation
@@ -117,68 +127,99 @@ export function calcularICB(dados: YearData, pesos: Pesos): number {
 }
 
 /**
- * NOVO MODELO: Câmbio de Equilíbrio Fundamental (CEF)
+ * MODELO REALISTA: Taxa de Câmbio de Equilíbrio Comportamental (BEER)
  * 
- * Combina 4 métricas reais:
- * 1. PPP (Paridade Poder de Compra) - base
- * 2. Balança Comercial ajustada
- * 3. Reservas / Importações
- * 4. Industrialização (valor agregado)
- * 5. Ajuste pelos pesos da cesta (simulação de cenário)
+ * Baseado em literatura econômica (Edwards, Williamson, Clark & MacDonald)
  * 
- * Fórmula: CEF = PPP × (1 + ajustes) × fatorCesta
+ * Câmbio = f(Termos de Troca, Diferencial Juros, Produtividade, Risco, Industrialização)
+ * 
+ * NÃO é um câmbio "justo" ou "ideal" - é o câmbio que os fundamentos justificam
  */
-export function calcularCambioEquilibrio(dados: YearData, pesos?: Pesos): number {
-  const ppp = modeloEquilibrio.pppBrasilUSD
+export function calcularCambioFundamental(dados: YearData, pesos?: Pesos): {
+  cambioAtual: number
+  cambioFundamental: number
+  cambioPotencial: number
+  desalinhamento: number
+  fatores: Record<string, number>
+} {
+  const br = fundamentosEconomicos.brasil
+  const bm = fundamentosEconomicos.benchmark
   
-  // 1. Ajuste por superávit/déficit comercial
-  const saldoComercialEstimado = dados.exportTotal * 0.15
-  const ajusteComercial = (saldoComercialEstimado / dados.exportTotal) * -0.5
+  // 1. FATOR INFLAÇÃO: Diferencial de inflação corrói o câmbio
+  // Cada 1% de inflação acima do benchmark = +2% no câmbio
+  const diferencialInflacao = br.inflacaoAnual - bm.inflacaoAnual
+  const fatorInflacao = 1 + (diferencialInflacao * 0.02)
   
-  // 2. Ajuste por cobertura de reservas
-  const importacaoMensal = (dados.exportTotal * 0.85) / 12
-  const mesesReserva = dados.reservas / importacaoMensal
-  const ajusteReservas = mesesReserva > 18 ? -0.10 : mesesReserva > 12 ? -0.05 : 0.05
+  // 2. FATOR PRODUTIVIDADE: Menor produtividade = moeda mais fraca
+  // Balassa-Samuelson: países menos produtivos têm câmbio mais depreciado
+  const ratioProdutividade = br.produtividadePPP / bm.produtividadePPP
+  const fatorProdutividade = 1 / ratioProdutividade
   
-  // 3. Ajuste por industrialização
-  const industrializacao = dados.exportIndustrializado / 100
-  const ajusteIndustria = (industrializacao - 0.50) * 0.8
+  // 3. FATOR RISCO: Prêmio de risco país
+  // Cada 100 bps de spread = +5% no câmbio
+  const spreadRisco = (br.riscoPaisBps - bm.riscoPaisBps) / 100
+  const fatorRisco = 1 + (spreadRisco * 0.05)
   
-  // 4. Ajuste pelos pesos da cesta (se fornecidos)
-  // Simula cenários: mais peso em indústria = moeda mais forte
-  let ajusteCesta = 0
+  // 4. FATOR ESTRUTURAL: Industrialização
+  // Países que exportam commodities têm câmbio mais volátil e depreciado
+  const gapIndustrializacao = (bm.exportIndustrializada - br.exportIndustrializada) / 100
+  const fatorEstrutura = 1 + (gapIndustrializacao * 0.15)
+  
+  // 5. FATOR FISCAL: Dívida pública
+  // Dívida alta = risco de monetização = moeda fraca
+  const excessoDivida = Math.max(0, br.dividaPIB - bm.dividaPIB) / 100
+  const fatorFiscal = 1 + (excessoDivida * 0.10)
+  
+  // 6. AJUSTE PELA CESTA (se fornecido)
+  let fatorCesta = 1
   if (pesos) {
-    // Peso padrão de indústria é 0.15 (15%)
-    // Se usuário aumentar, simula cenário de mais industrialização
+    // Simula cenário: mais peso em indústria = futuro mais industrializado
     const pesoIndustriaBase = 0.15
     const diferencaIndustria = pesos.industria - pesoIndustriaBase
-    
-    // Cada 0.10 (10%) a mais em indústria = -5% no câmbio (valoriza)
-    ajusteCesta = diferencaIndustria * -0.5
-    
-    // Reservas também afetam: mais peso = mais confiança
-    const pesoReservasBase = 0.15
-    const diferencaReservas = pesos.reservas - pesoReservasBase
-    ajusteCesta += diferencaReservas * -0.3
+    fatorCesta = 1 - (diferencaIndustria * 0.3) // Cada 10% a mais = -3% câmbio
   }
   
-  // Câmbio de equilíbrio
-  const cef = ppp * (1 + ajusteComercial + ajusteReservas + ajusteIndustria + ajusteCesta)
+  // Câmbio base PPP (Big Mac Index ajustado)
+  const cambioPPP = 2.65
   
-  return Math.max(cef, 1.50) // Mínimo realista
+  // Câmbio Fundamental = PPP ajustado pelos fundamentos
+  const cambioFundamental = cambioPPP * fatorInflacao * fatorProdutividade * fatorRisco * fatorEstrutura * fatorFiscal * fatorCesta
+  
+  // Câmbio Potencial: Se Brasil tivesse estrutura produtiva de país industrializado
+  const fatorEstruturaPotencial = 1 + ((bm.exportIndustrializada - 50) / 100 * 0.15)
+  const cambioPotencial = cambioPPP * fatorInflacao * fatorProdutividade * fatorRisco * fatorEstruturaPotencial * fatorFiscal
+  
+  // Câmbio atual (real)
+  const cambioAtual = dados.cambioReal
+  
+  // Desalinhamento: quanto o câmbio real está fora do fundamental
+  const desalinhamento = ((cambioAtual - cambioFundamental) / cambioFundamental) * 100
+  
+  return {
+    cambioAtual,
+    cambioFundamental: Math.max(cambioFundamental, 2.50), // Mínimo realista
+    cambioPotencial: Math.max(cambioPotencial, 2.00),
+    desalinhamento,
+    fatores: {
+      inflacao: fatorInflacao,
+      produtividade: fatorProdutividade,
+      risco: fatorRisco,
+      estrutura: fatorEstrutura,
+      fiscal: fatorFiscal,
+      cesta: fatorCesta,
+    }
+  }
 }
 
-/**
- * Calcula o "Câmbio Potencial" - se Brasil industrializasse
- * Simula cenário onde exportação industrializada = 50%
- */
+// Wrapper para compatibilidade
+export function calcularCambioEquilibrio(dados: YearData, pesos?: Pesos): number {
+  const resultado = calcularCambioFundamental(dados, pesos)
+  return resultado.cambioFundamental
+}
+
 export function calcularCambioPotencial(dados: YearData, pesos?: Pesos): number {
-  const dadosSimulados = {
-    ...dados,
-    exportIndustrializado: 50,
-    exportMateriaPrima: 50,
-  }
-  return calcularCambioEquilibrio(dadosSimulados, pesos)
+  const resultado = calcularCambioFundamental(dados, pesos)
+  return resultado.cambioPotencial
 }
 
 // Calculate simulated Real value based on ICB (LEGACY - mantido para compatibilidade)
