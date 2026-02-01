@@ -120,54 +120,69 @@ export function calcularICB(dados: YearData, pesos: Pesos): number {
  * NOVO MODELO: Câmbio de Equilíbrio Fundamental (CEF)
  * 
  * Combina 4 métricas reais:
- * 1. PPP (Paridade Poder de Compra) - peso 30%
- * 2. Balança Comercial ajustada - peso 25%
- * 3. Reservas / Importações - peso 25%
- * 4. Industrialização (valor agregado) - peso 20%
+ * 1. PPP (Paridade Poder de Compra) - base
+ * 2. Balança Comercial ajustada
+ * 3. Reservas / Importações
+ * 4. Industrialização (valor agregado)
+ * 5. Ajuste pelos pesos da cesta (simulação de cenário)
  * 
- * Fórmula: CEF = PPP × (1 + ajusteComercial + ajusteReservas + ajusteIndustria)
+ * Fórmula: CEF = PPP × (1 + ajustes) × fatorCesta
  */
-export function calcularCambioEquilibrio(dados: YearData): number {
+export function calcularCambioEquilibrio(dados: YearData, pesos?: Pesos): number {
   const ppp = modeloEquilibrio.pppBrasilUSD
   
   // 1. Ajuste por superávit/déficit comercial
-  // Superávit forte = moeda deveria valorizar
-  const saldoComercialEstimado = dados.exportTotal * 0.15 // ~15% superávit médio
-  const ajusteComercial = (saldoComercialEstimado / dados.exportTotal) * -0.5 // Superávit = valorização
+  const saldoComercialEstimado = dados.exportTotal * 0.15
+  const ajusteComercial = (saldoComercialEstimado / dados.exportTotal) * -0.5
   
   // 2. Ajuste por cobertura de reservas
-  // Reservas / 12 meses de importação = índice de segurança
-  const importacaoMensal = (dados.exportTotal * 0.85) / 12 // Importação ~85% da exportação
+  const importacaoMensal = (dados.exportTotal * 0.85) / 12
   const mesesReserva = dados.reservas / importacaoMensal
   const ajusteReservas = mesesReserva > 18 ? -0.10 : mesesReserva > 12 ? -0.05 : 0.05
   
   // 3. Ajuste por industrialização
-  // Quanto mais industrializado (menos MP), mais forte a moeda
   const industrializacao = dados.exportIndustrializado / 100
-  const ajusteIndustria = (industrializacao - 0.50) * 0.8 // Benchmark: 50% industrializado
+  const ajusteIndustria = (industrializacao - 0.50) * 0.8
+  
+  // 4. Ajuste pelos pesos da cesta (se fornecidos)
+  // Simula cenários: mais peso em indústria = moeda mais forte
+  let ajusteCesta = 0
+  if (pesos) {
+    // Peso padrão de indústria é 0.15 (15%)
+    // Se usuário aumentar, simula cenário de mais industrialização
+    const pesoIndustriaBase = 0.15
+    const diferencaIndustria = pesos.industria - pesoIndustriaBase
+    
+    // Cada 0.10 (10%) a mais em indústria = -5% no câmbio (valoriza)
+    ajusteCesta = diferencaIndustria * -0.5
+    
+    // Reservas também afetam: mais peso = mais confiança
+    const pesoReservasBase = 0.15
+    const diferencaReservas = pesos.reservas - pesoReservasBase
+    ajusteCesta += diferencaReservas * -0.3
+  }
   
   // Câmbio de equilíbrio
-  const cef = ppp * (1 + ajusteComercial + ajusteReservas + ajusteIndustria)
+  const cef = ppp * (1 + ajusteComercial + ajusteReservas + ajusteIndustria + ajusteCesta)
   
-  return Math.max(cef, 1.50) // Mínimo realista de R$ 1.50
+  return Math.max(cef, 1.50) // Mínimo realista
 }
 
 /**
  * Calcula o "Câmbio Potencial" - se Brasil industrializasse
- * Simula cenário onde exportação industrializada = 50% (benchmark México/China)
+ * Simula cenário onde exportação industrializada = 50%
  */
-export function calcularCambioPotencial(dados: YearData): number {
+export function calcularCambioPotencial(dados: YearData, pesos?: Pesos): number {
   const dadosSimulados = {
     ...dados,
-    exportIndustrializado: 50, // Simula 50% industrializado
+    exportIndustrializado: 50,
     exportMateriaPrima: 50,
   }
-  return calcularCambioEquilibrio(dadosSimulados)
+  return calcularCambioEquilibrio(dadosSimulados, pesos)
 }
 
 // Calculate simulated Real value based on ICB (LEGACY - mantido para compatibilidade)
 export function calcularRealSimulado(icbAtual: number, icbBase: number = 100): number {
-  // If ICB increased, Real should have appreciated (lower exchange rate)
   const fatorValorizacao = icbAtual / icbBase
   return baseValues.cambioBase / fatorValorizacao
 }
@@ -188,15 +203,15 @@ export function generateChartData(pesos: Pesos, startYear: number = 2000, endYea
   
   return filteredData.map(dados => {
     const icb = calcularICB(dados, pesos)
-    const cambioEquilibrio = calcularCambioEquilibrio(dados)
-    const cambioPotencial = calcularCambioPotencial(dados)
+    const cambioEquilibrio = calcularCambioEquilibrio(dados, pesos)
+    const cambioPotencial = calcularCambioPotencial(dados, pesos)
     const perdaBrasil = calcularPerdaBrasil(dados.exportTotal, dados.exportMateriaPrima)
     
     return {
       year: dados.year,
       cambioReal: dados.cambioReal,
-      cambioSimulado: Number(cambioEquilibrio.toFixed(2)), // Novo modelo
-      cambioPotencial: Number(cambioPotencial.toFixed(2)), // Se industrializasse
+      cambioSimulado: Number(cambioEquilibrio.toFixed(2)),
+      cambioPotencial: Number(cambioPotencial.toFixed(2)),
       icb: Number(icb.toFixed(1)),
       perdaBrasil: Number(perdaBrasil.toFixed(1)),
       exportMateriaPrima: dados.exportMateriaPrima,
@@ -212,15 +227,15 @@ export function generateChartData(pesos: Pesos, startYear: number = 2000, endYea
 export function getLatestData(pesos: Pesos) {
   const dados = historicalData[historicalData.length - 1]
   const icb = calcularICB(dados, pesos)
-  const cambioEquilibrio = calcularCambioEquilibrio(dados)
-  const cambioPotencial = calcularCambioPotencial(dados)
+  const cambioEquilibrio = calcularCambioEquilibrio(dados, pesos)
+  const cambioPotencial = calcularCambioPotencial(dados, pesos)
   const perdaBrasil = calcularPerdaBrasil(dados.exportTotal, dados.exportMateriaPrima)
   
   return {
     ano: dados.year,
     cambioReal: dados.cambioReal,
-    cambioSimulado: Number(cambioEquilibrio.toFixed(2)), // Novo modelo
-    cambioPotencial: Number(cambioPotencial.toFixed(2)), // Se industrializasse
+    cambioSimulado: Number(cambioEquilibrio.toFixed(2)),
+    cambioPotencial: Number(cambioPotencial.toFixed(2)),
     icb: Number(icb.toFixed(1)),
     perdaBrasil: Number(perdaBrasil.toFixed(1)),
     exportMateriaPrima: dados.exportMateriaPrima,
