@@ -13,6 +13,9 @@ import { TechDependencyPanel } from "@/components/tech-dependency-panel"
 import { EconomicDashboard } from "@/components/economic-dashboard"
 import { ScenariosPanel } from "@/components/scenarios-panel"
 import { PolicyRecommendations } from "@/components/policy-recommendations"
+import { DiagnosticPanel } from "@/components/diagnostic-panel"
+import { ScenarioSimulator } from "@/components/scenario-simulator"
+import { WeakCurrencyCost } from "@/components/weak-currency-cost"
 import { defaultPesos, type Pesos, generateChartData, getLatestData } from "@/lib/brasil-data"
 
 export default function BrasilPotenciaPage() {
@@ -42,7 +45,18 @@ export default function BrasilPotenciaPage() {
           </div>
         </section>
 
-        {/* Row 2: Historical Chart - Full Width */}
+        {/* Row 2: DIAGNÓSTICO - Por Que o Real é Fraco */}
+        <section>
+          <DiagnosticPanel />
+        </section>
+
+        {/* Row 3: SIMULADOR + CUSTO (2 Columns) */}
+        <section className="grid grid-cols-1 xl:grid-cols-2 gap-6">
+          <ScenarioSimulator />
+          <WeakCurrencyCost />
+        </section>
+
+        {/* Row 4: Historical Chart - Full Width */}
         <section>
           <HistoricalChart
             data={chartData}
