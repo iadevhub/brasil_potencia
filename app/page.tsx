@@ -21,7 +21,7 @@ import { defaultPesos, type Pesos, generateChartData, getLatestData } from "@/li
 export default function BrasilPotenciaPage() {
   const [pesos, setPesos] = useState<Pesos>(defaultPesos)
   const [startYear, setStartYear] = useState(2000)
-  const [endYear, setEndYear] = useState(2024)
+  const [endYear, setEndYear] = useState(2026)
 
   const chartData = useMemo(
     () => generateChartData(pesos, startYear, endYear),

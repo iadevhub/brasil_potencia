@@ -51,6 +51,9 @@ export const historicalData: YearData[] = [
   { year: 2022, cambioReal: 5.17, energia: 145, alimentos: 155, minerios: 145, industria: 88, reservas: 325, exportMateriaPrima: 85, exportIndustrializado: 15, importInsumos: 77, importConsumo: 13, exportTotal: 335 },
   { year: 2023, cambioReal: 4.97, energia: 135, alimentos: 142, minerios: 125, industria: 87, reservas: 355, exportMateriaPrima: 85, exportIndustrializado: 15, importInsumos: 77, importConsumo: 13, exportTotal: 340 },
   { year: 2024, cambioReal: 5.70, energia: 138, alimentos: 148, minerios: 132, industria: 89, reservas: 355, exportMateriaPrima: 85, exportIndustrializado: 15, importInsumos: 77, importConsumo: 13, exportTotal: 337 },
+  // 2025-2026: Dados mais recentes (projeções + dados BCB Jan/2026)
+  { year: 2025, cambioReal: 5.48, energia: 140, alimentos: 150, minerios: 128, industria: 88, reservas: 350, exportMateriaPrima: 85, exportIndustrializado: 15, importInsumos: 77, importConsumo: 13, exportTotal: 342 },
+  { year: 2026, cambioReal: 5.26, energia: 142, alimentos: 152, minerios: 130, industria: 88, reservas: 345, exportMateriaPrima: 86, exportIndustrializado: 14, importInsumos: 77, importConsumo: 13, exportTotal: 345 },
 ]
 
 // Base values for normalization (2010 = 100)
@@ -124,6 +127,27 @@ export function calcularICB(dados: YearData, pesos: Pesos): number {
   const reservasNorm = normalizar(dados.reservas, baseValues.reservas) * pesos.reservas
   
   return energiaNorm + alimentosNorm + mineriosNorm + industriaNorm + reservasNorm
+}
+
+/**
+ * ÍNDICE DE DEPENDÊNCIA: Commodity / Industrial
+ * 
+ * Mede quanto o Brasil depende de commodities vs produtos industrializados
+ * 
+ * Exemplo 2026: 86% commodity / 14% industrial = 6.1x
+ * Significa: Para cada $1 de exportação industrial, Brasil exporta $6.10 de commodity
+ * 
+ * Benchmark (Alemanha): 20% / 80% = 0.25x (inverte a relação)
+ * Meta razoável: 50% / 50% = 1.0x
+ */
+export function calcularIndiceDependencia(dados: YearData): number {
+  const commodity = dados.exportMateriaPrima
+  const industrial = dados.exportIndustrializado
+  
+  // Evita divisão por zero
+  if (industrial <= 0) return 99
+  
+  return commodity / industrial
 }
 
 /**
@@ -268,6 +292,7 @@ export function generateChartData(pesos: Pesos, startYear: number = 2000, endYea
 export function getLatestData(pesos: Pesos) {
   const dados = historicalData[historicalData.length - 1]
   const icb = calcularICB(dados, pesos)
+  const indiceDependencia = calcularIndiceDependencia(dados)
   const cambioEquilibrio = calcularCambioEquilibrio(dados, pesos)
   const cambioPotencial = calcularCambioPotencial(dados, pesos)
   const perdaBrasil = calcularPerdaBrasil(dados.exportTotal, dados.exportMateriaPrima)
@@ -278,6 +303,7 @@ export function getLatestData(pesos: Pesos) {
     cambioSimulado: Number(cambioEquilibrio.toFixed(2)),
     cambioPotencial: Number(cambioPotencial.toFixed(2)),
     icb: Number(icb.toFixed(1)),
+    indiceDependencia: Number(indiceDependencia.toFixed(1)),
     perdaBrasil: Number(perdaBrasil.toFixed(1)),
     exportMateriaPrima: dados.exportMateriaPrima,
     exportIndustrializado: dados.exportIndustrializado,

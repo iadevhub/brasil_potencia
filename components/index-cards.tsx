@@ -13,6 +13,7 @@ interface IndexCardsProps {
     cambioSimulado: number
     cambioPotencial?: number
     icb: number
+    indiceDependencia: number // Commodity/Industria ratio
     perdaBrasil: number
     reservas: number
   }
@@ -32,18 +33,20 @@ export function IndexCards({ data }: IndexCardsProps) {
 
   return (
     <div className="grid grid-cols-2 lg:grid-cols-4 gap-3">
-      {/* ICB Card */}
-      <Card className="bg-card border-primary/30">
+      {/* Índice de Dependência - Commodity/Industrial ratio */}
+      <Card className="bg-card border-amber-500/30">
         <CardHeader className="pb-2 pt-3 px-3">
           <CardTitle className="text-xs font-medium text-muted-foreground flex items-center gap-1.5">
-            <Gauge className="w-3.5 h-3.5 text-primary" />
-            Indice Cesta Brasil
+            <Gauge className="w-3.5 h-3.5 text-amber-500" />
+            Indice Dependencia
           </CardTitle>
         </CardHeader>
         <CardContent className="pb-3 px-3">
-          <div className="text-2xl font-bold text-primary">{data.icb}</div>
+          <div className="text-2xl font-bold text-amber-500">
+            {data.indiceDependencia.toFixed(1)}x
+          </div>
           <p className="text-[10px] text-muted-foreground mt-0.5">
-            Base 100 = 2010
+            Commodity / Industrial
           </p>
         </CardContent>
       </Card>
