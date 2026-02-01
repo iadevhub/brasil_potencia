@@ -15,6 +15,9 @@ import { ScenariosPanel } from "@/components/scenarios-panel"
 import { PolicyRecommendations } from "@/components/policy-recommendations"
 import { defaultPesos, type Pesos, generateChartData, getLatestData } from "@/lib/brasil-data"
 
+// Força renderização dinâmica (não usa cache estático)
+export const dynamic = 'force-dynamic'
+
 export default function BrasilPotenciaPage() {
   const [pesos, setPesos] = useState<Pesos>(defaultPesos)
   const [startYear, setStartYear] = useState(2000)
