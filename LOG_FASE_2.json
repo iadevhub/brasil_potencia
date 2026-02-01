@@ -1,0 +1,29 @@
+{
+  "fase": 2,
+  "timestamp": "23:06:58",
+  "status": "sucesso",
+  "tarefas_completadas": 5,
+  "simulacoes_geradas": 25,
+  "validacao": {
+    "periodoAnalise": "2000-2024 (25 anos)",
+    "r2_cambio_commodities": -1.4956,
+    "r2_energia_pib": 0.4054,
+    "r2_icb_cambio": -19.1927,
+    "correlacoes": {
+      "cambio_commodities": 0.37515999999999994,
+      "energia_pib": 0.4054
+    },
+    "metricas": {
+      "rmse": 1.921,
+      "mae": 1.3223,
+      "mape": 34.06
+    },
+    "status": "inválido"
+  },
+  "perda_brasil_total": 4.930000000000001,
+  "perda_por_decada": {
+    "2000-2009": 1.46,
+    "2010-2019": 2.9899999999999998,
+    "2020-2024": 0.48
+  }
+}

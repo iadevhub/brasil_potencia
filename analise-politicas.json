@@ -1,0 +1,124 @@
+{
+  "analises_individuais": [
+    {
+      "politica": {
+        "id": "chips-semiconductores",
+        "nome": "Hub de Semicondutores",
+        "descricao": "Criar indústria de chips e semicondutores no Brasil",
+        "setor": "Indústria",
+        "investimento": 15,
+        "prazo": 8,
+        "taxaRetorno": 0.22
+      },
+      "vpl": -0.956962397544066,
+      "tir": 0.06127051373441183,
+      "payback": 5.877136067490912,
+      "empregos": 6750,
+      "pibAdicional": 0.009,
+      "cambioImpacto": -0.3,
+      "reducaoPerdaBrasil": 0.4,
+      "roiAno1": 8.666666666666666,
+      "roiAno3": 25.999999999999996,
+      "roiAno5": 43.33333333333333,
+      "viabilidade": "baixa"
+    },
+    {
+      "politica": {
+        "id": "energia-renovavel",
+        "nome": "Complexo de Energia Renovável",
+        "descricao": "Expandir produção de energia solar, eólica e verde com exportação de eletricidade",
+        "setor": "Renováveis",
+        "investimento": 20,
+        "prazo": 10,
+        "taxaRetorno": 0.18
+      },
+      "vpl": -3.0070525640300874,
+      "tir": 0.04090978170310511,
+      "payback": 7.646317984153604,
+      "empregos": 9000,
+      "pibAdicional": 0.008,
+      "cambioImpacto": -0.3,
+      "reducaoPerdaBrasil": 0.6,
+      "roiAno1": 6.999999999999999,
+      "roiAno3": 20.999999999999996,
+      "roiAno5": 35,
+      "viabilidade": "baixa"
+    },
+    {
+      "politica": {
+        "id": "agro-tech",
+        "nome": "Agro-Tech & Processamento",
+        "descricao": "Industrializar processamento de alimentos e agroindustrialização",
+        "setor": "Alimentos",
+        "investimento": 8,
+        "prazo": 6,
+        "taxaRetorno": 0.25
+      },
+      "vpl": -0.7537711375720151,
+      "tir": 0.0462553097434737,
+      "payback": 5.011568254976002,
+      "empregos": 3600,
+      "pibAdicional": 0.004,
+      "cambioImpacto": -0.3,
+      "reducaoPerdaBrasil": 0.5,
+      "roiAno1": 11.25,
+      "roiAno3": 33.75,
+      "roiAno5": 56.25,
+      "viabilidade": "baixa"
+    },
+    {
+      "politica": {
+        "id": "mineracao-verde",
+        "nome": "Mineração Verde & Litio",
+        "descricao": "Beneficiamento de minérios e exploração de lítio com padrões ESG",
+        "setor": "Minérios",
+        "investimento": 12,
+        "prazo": 7,
+        "taxaRetorno": 0.2
+      },
+      "vpl": -2.4874188658148313,
+      "tir": 0.011175958395921184,
+      "payback": 6.646317984153601,
+      "empregos": 5400,
+      "pibAdicional": 0.0054,
+      "cambioImpacto": -0.3,
+      "reducaoPerdaBrasil": 0.45,
+      "roiAno1": 8.25,
+      "roiAno3": 24.749999999999996,
+      "roiAno5": 41.25,
+      "viabilidade": "baixa"
+    },
+    {
+      "politica": {
+        "id": "biodiesel-etanol",
+        "nome": "Complexo de Biocombustíveis",
+        "descricao": "Expandir biodiesel e etanol verde para exportação",
+        "setor": "Energia",
+        "investimento": 5,
+        "prazo": 5,
+        "taxaRetorno": 0.28
+      },
+      "vpl": -0.4835990584047988,
+      "tir": 0.04079295577589394,
+      "payback": 4.380999314285715,
+      "empregos": 2250,
+      "pibAdicional": 0.00275,
+      "cambioImpacto": -0.3,
+      "reducaoPerdaBrasil": 0.3,
+      "roiAno1": 11.5,
+      "roiAno3": 34.5,
+      "roiAno5": 57.49999999999999,
+      "viabilidade": "baixa"
+    }
+  ],
+  "impacto_cumulativo": {
+    "investimentoTotal": 60,
+    "empregosCriados": 27000,
+    "pibAdicional": 0.02915,
+    "reducaoPerdaBrasil": 56.25,
+    "cambioFortalecido": -1.5,
+    "prazoImplementacao": 10,
+    "scoreGeral": 3.4
+  },
+  "gerado_em": "2026-02-01T02:32:35.221Z"
+}

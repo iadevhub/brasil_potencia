@@ -1,0 +1,10 @@
+{
+  "name": "brasil-potencia",
+  "version": "1.0.0",
+  "private": true,
+  "framework": "nextjs",
+  "buildCommand": "pnpm build",
+  "devCommand": "pnpm dev",
+  "installCommand": "pnpm install",
+  "outputDirectory": ".next"
+}

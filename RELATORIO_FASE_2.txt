@@ -1,0 +1,72 @@
+
+════════════════════════════════════════════════════════════════════════════════
+FASE 2 - MODELO ECONÔMICO DO BRASIL
+════════════════════════════════════════════════════════════════════════════════
+
+[23:06:58] Relatório gerado com sucesso
+
+1. RESUMO EXECUTIVO
+────────────────────────────────────────────────────────────────────────────────
+
+Total de simulações: 25 anos (2000-2024)
+Validação do modelo: INVÁLIDO
+Perda Brasil acumulada: US$ 4.9 bilhões
+
+2. MÉTRICAS DE CONFIANÇA DO MODELO
+────────────────────────────────────────────────────────────────────────────────
+
+R² Câmbio vs Simulado: -1.4956 (alvo > 0.80)
+R² ICB vs Câmbio: -19.1927 (alvo > 0.70)
+R² Energia vs PIB: 0.4054 (alvo > 0.75)
+
+Métricas de Erro:
+- RMSE: 1.9210 R$/USD
+- MAE: 1.3223 R$/USD
+- MAPE: 34.06%
+
+3. PERDA BRASIL POR PERÍODO
+────────────────────────────────────────────────────────────────────────────────
+
+2000-2009: US$ 1.5 bilhões
+2010-2019: US$ 3.0 bilhões
+2020-2024: US$ 0.5 bilhões
+TOTAL (2000-2024): US$ 4.9 bilhões
+Média anual: US$ 0.2 bilhões
+
+4. TOP 5 ANOS COM MAIOR PERDA BRASIL
+────────────────────────────────────────────────────────────────────────────────
+
+1. 2011: US$ 0.6 bi (ICB: 115.4, Câmbio: 1.67 R$/USD)
+2. 2012: US$ 0.5 bi (ICB: 116.4, Câmbio: 1.95 R$/USD)
+3. 2013: US$ 0.4 bi (ICB: 115.1, Câmbio: 2.16 R$/USD)
+4. 2010: US$ 0.4 bi (ICB: 100.0, Câmbio: 1.76 R$/USD)
+5. 2008: US$ 0.3 bi (ICB: 102.9, Câmbio: 1.83 R$/USD)
+
+5. ANÁLISE ICB REAL vs POTENCIAL
+────────────────────────────────────────────────────────────────────────────────
+
+Média ICB Real: 99.4
+Média ICB Potencial: 108.8
+Diferença média: 9.4 pontos
+
+Maior gap ICB (Ano): 2024
+   Diferença: 11.7 pontos
+
+6. CÂMBIO REAL vs SIMULADO
+────────────────────────────────────────────────────────────────────────────────
+
+2010 (Baseline):
+   Real: R$ 1.7600/USD
+   Simulado: R$ 1.7600 /USD
+
+2024 (Atual):
+   Real: R$ 5.1500/USD
+   Simulado: R$ 1.3545/USD
+
+Diferença 2024: R$ 3.7955/USD
+
+════════════════════════════════════════════════════════════════════════════════
+Relatório gerado em: 23:06:58
+Status: ✅ FASE 2 CONCLUÍDA COM SUCESSO
+════════════════════════════════════════════════════════════════════════════════
+  

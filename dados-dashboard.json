@@ -1,0 +1,1198 @@
+{
+  "serie": [
+    {
+      "ano": 2000,
+      "icbReal": 60.312802768166094,
+      "icbPotencial": 65.74095501730105,
+      "icbGap": 5.428152249134953,
+      "cambioSimulado": null,
+      "perdaBrasil": null,
+      "pibGrowth": 0,
+      "setores": [
+        {
+          "setor": "Energia",
+          "producao": 72,
+          "producaoPotencial": 82.8,
+          "gap": 10.799999999999999,
+          "percentualGap": 15
+        },
+        {
+          "setor": "Alimentos",
+          "producao": 65,
+          "producaoPotencial": 72.80000000000001,
+          "gap": 7.8,
+          "percentualGap": 12
+        },
+        {
+          "setor": "Minérios",
+          "producao": 58,
+          "producaoPotencial": 62.64,
+          "gap": 4.64,
+          "percentualGap": 8
+        },
+        {
+          "setor": "Indústria",
+          "producao": 85,
+          "producaoPotencial": 93.50000000000001,
+          "gap": 8.5,
+          "percentualGap": 10
+        },
+        {
+          "setor": "Reservas",
+          "producao": 33,
+          "producaoPotencial": 34.65,
+          "gap": 1.6500000000000001,
+          "percentualGap": 5
+        }
+      ]
+    },
+    {
+      "ano": 2001,
+      "icbReal": 60.818512110726644,
+      "icbPotencial": 66.29217820069205,
+      "icbGap": 5.4736660899654055,
+      "cambioSimulado": null,
+      "perdaBrasil": null,
+      "pibGrowth": 0,
+      "setores": [
+        {
+          "setor": "Energia",
+          "producao": 74,
+          "producaoPotencial": 85.1,
+          "gap": 11.1,
+          "percentualGap": 15
+        },
+        {
+          "setor": "Alimentos",
+          "producao": 68,
+          "producaoPotencial": 76.16000000000001,
+          "gap": 8.16,
+          "percentualGap": 12
+        },
+        {
+          "setor": "Minérios",
+          "producao": 55,
+          "producaoPotencial": 59.400000000000006,
+          "gap": 4.4,
+          "percentualGap": 8
+        },
+        {
+          "setor": "Indústria",
+          "producao": 83,
+          "producaoPotencial": 91.30000000000001,
+          "gap": 8.3,
+          "percentualGap": 10
+        },
+        {
+          "setor": "Reservas",
+          "producao": 36,
+          "producaoPotencial": 37.800000000000004,
+          "gap": 1.8,
+          "percentualGap": 5
+        }
+      ]
+    },
+    {
+      "ano": 2002,
+      "icbReal": 61.67231833910034,
+      "icbPotencial": 67.22282698961938,
+      "icbGap": 5.550508650519035,
+      "cambioSimulado": null,
+      "perdaBrasil": null,
+      "pibGrowth": 0,
+      "setores": [
+        {
+          "setor": "Energia",
+          "producao": 76,
+          "producaoPotencial": 87.39999999999999,
+          "gap": 11.4,
+          "percentualGap": 15
+        },
+        {
+          "setor": "Alimentos",
+          "producao": 72,
+          "producaoPotencial": 80.64000000000001,
+          "gap": 8.64,
+          "percentualGap": 12
+        },
+        {
+          "setor": "Minérios",
+          "producao": 52,
+          "producaoPotencial": 56.160000000000004,
+          "gap": 4.16,
+          "percentualGap": 8
+        },
+        {
+          "setor": "Indústria",
+          "producao": 82,
+          "producaoPotencial": 90.2,
+          "gap": 8.200000000000001,
+          "percentualGap": 10
+        },
+        {
+          "setor": "Reservas",
+          "producao": 38,
+          "producaoPotencial": 39.9,
+          "gap": 1.9000000000000001,
+          "percentualGap": 5
+        }
+      ]
+    },
+    {
+      "ano": 2003,
+      "icbReal": 65.2932525951557,
+      "icbPotencial": 71.16964532871972,
+      "icbGap": 5.876392733564018,
+      "cambioSimulado": null,
+      "perdaBrasil": null,
+      "pibGrowth": 0,
+      "setores": [
+        {
+          "setor": "Energia",
+          "producao": 78,
+          "producaoPotencial": 89.69999999999999,
+          "gap": 11.7,
+          "percentualGap": 15
+        },
+        {
+          "setor": "Alimentos",
+          "producao": 78,
+          "producaoPotencial": 87.36000000000001,
+          "gap": 9.36,
+          "percentualGap": 12
+        },
+        {
+          "setor": "Minérios",
+          "producao": 58,
+          "producaoPotencial": 62.64,
+          "gap": 4.64,
+          "percentualGap": 8
+        },
+        {
+          "setor": "Indústria",
+          "producao": 81,
+          "producaoPotencial": 89.10000000000001,
+          "gap": 8.1,
+          "percentualGap": 10
+        },
+        {
+          "setor": "Reservas",
+          "producao": 49,
+          "producaoPotencial": 51.45,
+          "gap": 2.45,
+          "percentualGap": 5
+        }
+      ]
+    },
+    {
+      "ano": 2004,
+      "icbReal": 72.10086505190311,
+      "icbPotencial": 78.5899429065744,
+      "icbGap": 6.4890778546712795,
+      "cambioSimulado": null,
+      "perdaBrasil": null,
+      "pibGrowth": 0,
+      "setores": [
+        {
+          "setor": "Energia",
+          "producao": 82,
+          "producaoPotencial": 94.3,
+          "gap": 12.299999999999999,
+          "percentualGap": 15
+        },
+        {
+          "setor": "Alimentos",
+          "producao": 85,
+          "producaoPotencial": 95.2,
+          "gap": 10.2,
+          "percentualGap": 12
+        },
+        {
+          "setor": "Minérios",
+          "producao": 72,
+          "producaoPotencial": 77.76,
+          "gap": 5.76,
+          "percentualGap": 8
+        },
+        {
+          "setor": "Indústria",
+          "producao": 88,
+          "producaoPotencial": 96.80000000000001,
+          "gap": 8.8,
+          "percentualGap": 10
+        },
+        {
+          "setor": "Reservas",
+          "producao": 53,
+          "producaoPotencial": 55.650000000000006,
+          "gap": 2.6500000000000004,
+          "percentualGap": 5
+        }
+      ]
+    },
+    {
+      "ano": 2005,
+      "icbReal": 75.30276816608996,
+      "icbPotencial": 82.08001730103807,
+      "icbGap": 6.777249134948107,
+      "cambioSimulado": null,
+      "perdaBrasil": null,
+      "pibGrowth": 0,
+      "setores": [
+        {
+          "setor": "Energia",
+          "producao": 86,
+          "producaoPotencial": 98.89999999999999,
+          "gap": 12.9,
+          "percentualGap": 15
+        },
+        {
+          "setor": "Alimentos",
+          "producao": 82,
+          "producaoPotencial": 91.84,
+          "gap": 9.84,
+          "percentualGap": 12
+        },
+        {
+          "setor": "Minérios",
+          "producao": 85,
+          "producaoPotencial": 91.80000000000001,
+          "gap": 6.8,
+          "percentualGap": 8
+        },
+        {
+          "setor": "Indústria",
+          "producao": 90,
+          "producaoPotencial": 99.00000000000001,
+          "gap": 9,
+          "percentualGap": 10
+        },
+        {
+          "setor": "Reservas",
+          "producao": 54,
+          "producaoPotencial": 56.7,
+          "gap": 2.7,
+          "percentualGap": 5
+        }
+      ]
+    },
+    {
+      "ano": 2006,
+      "icbReal": 81.16366782006921,
+      "icbPotencial": 88.46839792387544,
+      "icbGap": 7.304730103806236,
+      "cambioSimulado": null,
+      "perdaBrasil": null,
+      "pibGrowth": 0,
+      "setores": [
+        {
+          "setor": "Energia",
+          "producao": 90,
+          "producaoPotencial": 103.49999999999999,
+          "gap": 13.5,
+          "percentualGap": 15
+        },
+        {
+          "setor": "Alimentos",
+          "producao": 88,
+          "producaoPotencial": 98.56,
+          "gap": 10.559999999999999,
+          "percentualGap": 12
+        },
+        {
+          "setor": "Minérios",
+          "producao": 92,
+          "producaoPotencial": 99.36000000000001,
+          "gap": 7.36,
+          "percentualGap": 8
+        },
+        {
+          "setor": "Indústria",
+          "producao": 92,
+          "producaoPotencial": 101.2,
+          "gap": 9.200000000000001,
+          "percentualGap": 10
+        },
+        {
+          "setor": "Reservas",
+          "producao": 86,
+          "producaoPotencial": 90.3,
+          "gap": 4.3,
+          "percentualGap": 5
+        }
+      ]
+    },
+    {
+      "ano": 2007,
+      "icbReal": 92.29256055363322,
+      "icbPotencial": 100.59889100346022,
+      "icbGap": 8.306330449827001,
+      "cambioSimulado": null,
+      "perdaBrasil": null,
+      "pibGrowth": 0,
+      "setores": [
+        {
+          "setor": "Energia",
+          "producao": 94,
+          "producaoPotencial": 108.1,
+          "gap": 14.1,
+          "percentualGap": 15
+        },
+        {
+          "setor": "Alimentos",
+          "producao": 95,
+          "producaoPotencial": 106.4,
+          "gap": 11.4,
+          "percentualGap": 12
+        },
+        {
+          "setor": "Minérios",
+          "producao": 105,
+          "producaoPotencial": 113.4,
+          "gap": 8.4,
+          "percentualGap": 8
+        },
+        {
+          "setor": "Indústria",
+          "producao": 98,
+          "producaoPotencial": 107.80000000000001,
+          "gap": 9.8,
+          "percentualGap": 10
+        },
+        {
+          "setor": "Reservas",
+          "producao": 180,
+          "producaoPotencial": 189,
+          "gap": 9,
+          "percentualGap": 5
+        }
+      ]
+    },
+    {
+      "ano": 2008,
+      "icbReal": 102.89394463667821,
+      "icbPotencial": 112.15439965397925,
+      "icbGap": 9.260455017301041,
+      "cambioSimulado": null,
+      "perdaBrasil": null,
+      "pibGrowth": 0,
+      "setores": [
+        {
+          "setor": "Energia",
+          "producao": 98,
+          "producaoPotencial": 112.69999999999999,
+          "gap": 14.7,
+          "percentualGap": 15
+        },
+        {
+          "setor": "Alimentos",
+          "producao": 110,
+          "producaoPotencial": 123.20000000000002,
+          "gap": 13.2,
+          "percentualGap": 12
+        },
+        {
+          "setor": "Minérios",
+          "producao": 125,
+          "producaoPotencial": 135,
+          "gap": 10,
+          "percentualGap": 8
+        },
+        {
+          "setor": "Indústria",
+          "producao": 101,
+          "producaoPotencial": 111.10000000000001,
+          "gap": 10.100000000000001,
+          "percentualGap": 10
+        },
+        {
+          "setor": "Reservas",
+          "producao": 207,
+          "producaoPotencial": 217.35000000000002,
+          "gap": 10.350000000000001,
+          "percentualGap": 5
+        }
+      ]
+    },
+    {
+      "ano": 2009,
+      "icbReal": 93.75484429065743,
+      "icbPotencial": 102.1927802768166,
+      "icbGap": 8.437935986159175,
+      "cambioSimulado": null,
+      "perdaBrasil": null,
+      "pibGrowth": 0,
+      "setores": [
+        {
+          "setor": "Energia",
+          "producao": 95,
+          "producaoPotencial": 109.24999999999999,
+          "gap": 14.25,
+          "percentualGap": 15
+        },
+        {
+          "setor": "Alimentos",
+          "producao": 98,
+          "producaoPotencial": 109.76,
+          "gap": 11.76,
+          "percentualGap": 12
+        },
+        {
+          "setor": "Minérios",
+          "producao": 95,
+          "producaoPotencial": 102.60000000000001,
+          "gap": 7.6000000000000005,
+          "percentualGap": 8
+        },
+        {
+          "setor": "Indústria",
+          "producao": 94,
+          "producaoPotencial": 103.4,
+          "gap": 9.4,
+          "percentualGap": 10
+        },
+        {
+          "setor": "Reservas",
+          "producao": 239,
+          "producaoPotencial": 250.95000000000002,
+          "gap": 11.950000000000001,
+          "percentualGap": 5
+        }
+      ]
+    },
+    {
+      "ano": 2010,
+      "icbReal": 100,
+      "icbPotencial": 109.00000000000001,
+      "icbGap": 9.000000000000014,
+      "cambioSimulado": null,
+      "perdaBrasil": null,
+      "pibGrowth": 0,
+      "setores": [
+        {
+          "setor": "Energia",
+          "producao": 100,
+          "producaoPotencial": 114.99999999999999,
+          "gap": 15,
+          "percentualGap": 15
+        },
+        {
+          "setor": "Alimentos",
+          "producao": 100,
+          "producaoPotencial": 112.00000000000001,
+          "gap": 12,
+          "percentualGap": 12
+        },
+        {
+          "setor": "Minérios",
+          "producao": 100,
+          "producaoPotencial": 108,
+          "gap": 8,
+          "percentualGap": 8
+        },
+        {
+          "setor": "Indústria",
+          "producao": 100,
+          "producaoPotencial": 110.00000000000001,
+          "gap": 10,
+          "percentualGap": 10
+        },
+        {
+          "setor": "Reservas",
+          "producao": 289,
+          "producaoPotencial": 303.45,
+          "gap": 14.450000000000001,
+          "percentualGap": 5
+        }
+      ]
+    },
+    {
+      "ano": 2011,
+      "icbReal": 115.41989619377163,
+      "icbPotencial": 125.80768685121109,
+      "icbGap": 10.387790657439453,
+      "cambioSimulado": null,
+      "perdaBrasil": null,
+      "pibGrowth": 0,
+      "setores": [
+        {
+          "setor": "Energia",
+          "producao": 105,
+          "producaoPotencial": 120.74999999999999,
+          "gap": 15.75,
+          "percentualGap": 15
+        },
+        {
+          "setor": "Alimentos",
+          "producao": 115,
+          "producaoPotencial": 128.8,
+          "gap": 13.799999999999999,
+          "percentualGap": 12
+        },
+        {
+          "setor": "Minérios",
+          "producao": 135,
+          "producaoPotencial": 145.8,
+          "gap": 10.8,
+          "percentualGap": 8
+        },
+        {
+          "setor": "Indústria",
+          "producao": 101,
+          "producaoPotencial": 111.10000000000001,
+          "gap": 10.100000000000001,
+          "percentualGap": 10
+        },
+        {
+          "setor": "Reservas",
+          "producao": 352,
+          "producaoPotencial": 369.6,
+          "gap": 17.6,
+          "percentualGap": 5
+        }
+      ]
+    },
+    {
+      "ano": 2012,
+      "icbReal": 116.3712802768166,
+      "icbPotencial": 126.84469550173011,
+      "icbGap": 10.47341522491351,
+      "cambioSimulado": null,
+      "perdaBrasil": null,
+      "pibGrowth": 0,
+      "setores": [
+        {
+          "setor": "Energia",
+          "producao": 108,
+          "producaoPotencial": 124.19999999999999,
+          "gap": 16.2,
+          "percentualGap": 15
+        },
+        {
+          "setor": "Alimentos",
+          "producao": 125,
+          "producaoPotencial": 140,
+          "gap": 15,
+          "percentualGap": 12
+        },
+        {
+          "setor": "Minérios",
+          "producao": 118,
+          "producaoPotencial": 127.44000000000001,
+          "gap": 9.44,
+          "percentualGap": 8
+        },
+        {
+          "setor": "Indústria",
+          "producao": 99,
+          "producaoPotencial": 108.9,
+          "gap": 9.9,
+          "percentualGap": 10
+        },
+        {
+          "setor": "Reservas",
+          "producao": 379,
+          "producaoPotencial": 397.95,
+          "gap": 18.95,
+          "percentualGap": 5
+        }
+      ]
+    },
+    {
+      "ano": 2013,
+      "icbReal": 115.06557093425606,
+      "icbPotencial": 125.42147231833911,
+      "icbGap": 10.355901384083054,
+      "cambioSimulado": null,
+      "perdaBrasil": null,
+      "pibGrowth": 0,
+      "setores": [
+        {
+          "setor": "Energia",
+          "producao": 110,
+          "producaoPotencial": 126.49999999999999,
+          "gap": 16.5,
+          "percentualGap": 15
+        },
+        {
+          "setor": "Alimentos",
+          "producao": 122,
+          "producaoPotencial": 136.64000000000001,
+          "gap": 14.639999999999999,
+          "percentualGap": 12
+        },
+        {
+          "setor": "Minérios",
+          "producao": 112,
+          "producaoPotencial": 120.96000000000001,
+          "gap": 8.96,
+          "percentualGap": 8
+        },
+        {
+          "setor": "Indústria",
+          "producao": 101,
+          "producaoPotencial": 111.10000000000001,
+          "gap": 10.100000000000001,
+          "percentualGap": 10
+        },
+        {
+          "setor": "Reservas",
+          "producao": 376,
+          "producaoPotencial": 394.8,
+          "gap": 18.8,
+          "percentualGap": 5
+        }
+      ]
+    },
+    {
+      "ano": 2014,
+      "icbReal": 110.61176470588235,
+      "icbPotencial": 120.56682352941178,
+      "icbGap": 9.955058823529427,
+      "cambioSimulado": null,
+      "perdaBrasil": null,
+      "pibGrowth": 0,
+      "setores": [
+        {
+          "setor": "Energia",
+          "producao": 112,
+          "producaoPotencial": 128.79999999999998,
+          "gap": 16.8,
+          "percentualGap": 15
+        },
+        {
+          "setor": "Alimentos",
+          "producao": 118,
+          "producaoPotencial": 132.16000000000003,
+          "gap": 14.16,
+          "percentualGap": 12
+        },
+        {
+          "setor": "Minérios",
+          "producao": 95,
+          "producaoPotencial": 102.60000000000001,
+          "gap": 7.6000000000000005,
+          "percentualGap": 8
+        },
+        {
+          "setor": "Indústria",
+          "producao": 98,
+          "producaoPotencial": 107.80000000000001,
+          "gap": 9.8,
+          "percentualGap": 10
+        },
+        {
+          "setor": "Reservas",
+          "producao": 374,
+          "producaoPotencial": 392.7,
+          "gap": 18.7,
+          "percentualGap": 5
+        }
+      ]
+    },
+    {
+      "ano": 2015,
+      "icbReal": 100.3022491349481,
+      "icbPotencial": 109.32945155709344,
+      "icbGap": 9.027202422145336,
+      "cambioSimulado": null,
+      "perdaBrasil": null,
+      "pibGrowth": 0,
+      "setores": [
+        {
+          "setor": "Energia",
+          "producao": 108,
+          "producaoPotencial": 124.19999999999999,
+          "gap": 16.2,
+          "percentualGap": 15
+        },
+        {
+          "setor": "Alimentos",
+          "producao": 105,
+          "producaoPotencial": 117.60000000000001,
+          "gap": 12.6,
+          "percentualGap": 12
+        },
+        {
+          "setor": "Minérios",
+          "producao": 72,
+          "producaoPotencial": 77.76,
+          "gap": 5.76,
+          "percentualGap": 8
+        },
+        {
+          "setor": "Indústria",
+          "producao": 90,
+          "producaoPotencial": 99.00000000000001,
+          "gap": 9,
+          "percentualGap": 10
+        },
+        {
+          "setor": "Reservas",
+          "producao": 369,
+          "producaoPotencial": 387.45,
+          "gap": 18.45,
+          "percentualGap": 5
+        }
+      ]
+    },
+    {
+      "ano": 2016,
+      "icbReal": 99.05795847750865,
+      "icbPotencial": 107.97317474048444,
+      "icbGap": 8.91521626297579,
+      "cambioSimulado": null,
+      "perdaBrasil": null,
+      "pibGrowth": 0,
+      "setores": [
+        {
+          "setor": "Energia",
+          "producao": 105,
+          "producaoPotencial": 120.74999999999999,
+          "gap": 15.75,
+          "percentualGap": 15
+        },
+        {
+          "setor": "Alimentos",
+          "producao": 108,
+          "producaoPotencial": 120.96000000000001,
+          "gap": 12.959999999999999,
+          "percentualGap": 12
+        },
+        {
+          "setor": "Minérios",
+          "producao": 68,
+          "producaoPotencial": 73.44,
+          "gap": 5.44,
+          "percentualGap": 8
+        },
+        {
+          "setor": "Indústria",
+          "producao": 86,
+          "producaoPotencial": 94.60000000000001,
+          "gap": 8.6,
+          "percentualGap": 10
+        },
+        {
+          "setor": "Reservas",
+          "producao": 372,
+          "producaoPotencial": 390.6,
+          "gap": 18.6,
+          "percentualGap": 5
+        }
+      ]
+    },
+    {
+      "ano": 2017,
+      "icbReal": 105.62698961937716,
+      "icbPotencial": 115.13341868512111,
+      "icbGap": 9.506429065743959,
+      "cambioSimulado": null,
+      "perdaBrasil": null,
+      "pibGrowth": 0,
+      "setores": [
+        {
+          "setor": "Energia",
+          "producao": 108,
+          "producaoPotencial": 124.19999999999999,
+          "gap": 16.2,
+          "percentualGap": 15
+        },
+        {
+          "setor": "Alimentos",
+          "producao": 115,
+          "producaoPotencial": 128.8,
+          "gap": 13.799999999999999,
+          "percentualGap": 12
+        },
+        {
+          "setor": "Minérios",
+          "producao": 85,
+          "producaoPotencial": 91.80000000000001,
+          "gap": 6.8,
+          "percentualGap": 8
+        },
+        {
+          "setor": "Indústria",
+          "producao": 87,
+          "producaoPotencial": 95.7,
+          "gap": 8.700000000000001,
+          "percentualGap": 10
+        },
+        {
+          "setor": "Reservas",
+          "producao": 382,
+          "producaoPotencial": 401.1,
+          "gap": 19.1,
+          "percentualGap": 5
+        }
+      ]
+    },
+    {
+      "ano": 2018,
+      "icbReal": 107.63650519031142,
+      "icbPotencial": 117.32379065743946,
+      "icbGap": 9.687285467128035,
+      "cambioSimulado": null,
+      "perdaBrasil": null,
+      "pibGrowth": 0,
+      "setores": [
+        {
+          "setor": "Energia",
+          "producao": 115,
+          "producaoPotencial": 132.25,
+          "gap": 17.25,
+          "percentualGap": 15
+        },
+        {
+          "setor": "Alimentos",
+          "producao": 112,
+          "producaoPotencial": 125.44000000000001,
+          "gap": 13.44,
+          "percentualGap": 12
+        },
+        {
+          "setor": "Minérios",
+          "producao": 88,
+          "producaoPotencial": 95.04,
+          "gap": 7.04,
+          "percentualGap": 8
+        },
+        {
+          "setor": "Indústria",
+          "producao": 88,
+          "producaoPotencial": 96.80000000000001,
+          "gap": 8.8,
+          "percentualGap": 10
+        },
+        {
+          "setor": "Reservas",
+          "producao": 387,
+          "producaoPotencial": 406.35,
+          "gap": 19.35,
+          "percentualGap": 5
+        }
+      ]
+    },
+    {
+      "ano": 2019,
+      "icbReal": 111.34844290657439,
+      "icbPotencial": 121.3698027681661,
+      "icbGap": 10.021359861591705,
+      "cambioSimulado": null,
+      "perdaBrasil": null,
+      "pibGrowth": 0,
+      "setores": [
+        {
+          "setor": "Energia",
+          "producao": 118,
+          "producaoPotencial": 135.7,
+          "gap": 17.7,
+          "percentualGap": 15
+        },
+        {
+          "setor": "Alimentos",
+          "producao": 115,
+          "producaoPotencial": 128.8,
+          "gap": 13.799999999999999,
+          "percentualGap": 12
+        },
+        {
+          "setor": "Minérios",
+          "producao": 105,
+          "producaoPotencial": 113.4,
+          "gap": 8.4,
+          "percentualGap": 8
+        },
+        {
+          "setor": "Indústria",
+          "producao": 87,
+          "producaoPotencial": 95.7,
+          "gap": 8.700000000000001,
+          "percentualGap": 10
+        },
+        {
+          "setor": "Reservas",
+          "producao": 367,
+          "producaoPotencial": 385.35,
+          "gap": 18.35,
+          "percentualGap": 5
+        }
+      ]
+    },
+    {
+      "ano": 2020,
+      "icbReal": 114.02750865051902,
+      "icbPotencial": 124.28998442906574,
+      "icbGap": 10.262475778546715,
+      "cambioSimulado": null,
+      "perdaBrasil": null,
+      "pibGrowth": 0,
+      "setores": [
+        {
+          "setor": "Energia",
+          "producao": 108,
+          "producaoPotencial": 124.19999999999999,
+          "gap": 16.2,
+          "percentualGap": 15
+        },
+        {
+          "setor": "Alimentos",
+          "producao": 125,
+          "producaoPotencial": 140,
+          "gap": 15,
+          "percentualGap": 12
+        },
+        {
+          "setor": "Minérios",
+          "producao": 125,
+          "producaoPotencial": 135,
+          "gap": 10,
+          "percentualGap": 8
+        },
+        {
+          "setor": "Indústria",
+          "producao": 82,
+          "producaoPotencial": 90.2,
+          "gap": 8.200000000000001,
+          "percentualGap": 10
+        },
+        {
+          "setor": "Reservas",
+          "producao": 356,
+          "producaoPotencial": 373.8,
+          "gap": 17.8,
+          "percentualGap": 5
+        }
+      ]
+    },
+    {
+      "ano": 2021,
+      "icbReal": 134.18892733564013,
+      "icbPotencial": 146.26593079584777,
+      "icbGap": 12.077003460207635,
+      "cambioSimulado": null,
+      "perdaBrasil": null,
+      "pibGrowth": 0,
+      "setores": [
+        {
+          "setor": "Energia",
+          "producao": 125,
+          "producaoPotencial": 143.75,
+          "gap": 18.75,
+          "percentualGap": 15
+        },
+        {
+          "setor": "Alimentos",
+          "producao": 145,
+          "producaoPotencial": 162.4,
+          "gap": 17.4,
+          "percentualGap": 12
+        },
+        {
+          "setor": "Minérios",
+          "producao": 175,
+          "producaoPotencial": 189,
+          "gap": 14,
+          "percentualGap": 8
+        },
+        {
+          "setor": "Indústria",
+          "producao": 86,
+          "producaoPotencial": 94.60000000000001,
+          "gap": 8.6,
+          "percentualGap": 10
+        },
+        {
+          "setor": "Reservas",
+          "producao": 362,
+          "producaoPotencial": 380.1,
+          "gap": 18.1,
+          "percentualGap": 5
+        }
+      ]
+    },
+    {
+      "ano": 2022,
+      "icbReal": 134.06851211072666,
+      "icbPotencial": 146.13467820069206,
+      "icbGap": 12.066166089965407,
+      "cambioSimulado": null,
+      "perdaBrasil": null,
+      "pibGrowth": 0,
+      "setores": [
+        {
+          "setor": "Energia",
+          "producao": 145,
+          "producaoPotencial": 166.75,
+          "gap": 21.75,
+          "percentualGap": 15
+        },
+        {
+          "setor": "Alimentos",
+          "producao": 155,
+          "producaoPotencial": 173.60000000000002,
+          "gap": 18.599999999999998,
+          "percentualGap": 12
+        },
+        {
+          "setor": "Minérios",
+          "producao": 145,
+          "producaoPotencial": 156.60000000000002,
+          "gap": 11.6,
+          "percentualGap": 8
+        },
+        {
+          "setor": "Indústria",
+          "producao": 88,
+          "producaoPotencial": 96.80000000000001,
+          "gap": 8.8,
+          "percentualGap": 10
+        },
+        {
+          "setor": "Reservas",
+          "producao": 325,
+          "producaoPotencial": 341.25,
+          "gap": 16.25,
+          "percentualGap": 5
+        }
+      ]
+    },
+    {
+      "ano": 2023,
+      "icbReal": 125.72560553633218,
+      "icbPotencial": 137.0409100346021,
+      "icbGap": 11.31530449826991,
+      "cambioSimulado": null,
+      "perdaBrasil": null,
+      "pibGrowth": 0,
+      "setores": [
+        {
+          "setor": "Energia",
+          "producao": 135,
+          "producaoPotencial": 155.25,
+          "gap": 20.25,
+          "percentualGap": 15
+        },
+        {
+          "setor": "Alimentos",
+          "producao": 142,
+          "producaoPotencial": 159.04000000000002,
+          "gap": 17.04,
+          "percentualGap": 12
+        },
+        {
+          "setor": "Minérios",
+          "producao": 125,
+          "producaoPotencial": 135,
+          "gap": 10,
+          "percentualGap": 8
+        },
+        {
+          "setor": "Indústria",
+          "producao": 87,
+          "producaoPotencial": 95.7,
+          "gap": 8.700000000000001,
+          "percentualGap": 10
+        },
+        {
+          "setor": "Reservas",
+          "producao": 355,
+          "producaoPotencial": 372.75,
+          "gap": 17.75,
+          "percentualGap": 5
+        }
+      ]
+    },
+    {
+      "ano": 2024,
+      "icbReal": 129.93512110726644,
+      "icbPotencial": 141.62928200692042,
+      "icbGap": 11.69416089965398,
+      "cambioSimulado": null,
+      "perdaBrasil": null,
+      "pibGrowth": 0,
+      "setores": [
+        {
+          "setor": "Energia",
+          "producao": 138,
+          "producaoPotencial": 158.7,
+          "gap": 20.7,
+          "percentualGap": 15
+        },
+        {
+          "setor": "Alimentos",
+          "producao": 148,
+          "producaoPotencial": 165.76000000000002,
+          "gap": 17.759999999999998,
+          "percentualGap": 12
+        },
+        {
+          "setor": "Minérios",
+          "producao": 132,
+          "producaoPotencial": 142.56,
+          "gap": 10.56,
+          "percentualGap": 8
+        },
+        {
+          "setor": "Indústria",
+          "producao": 89,
+          "producaoPotencial": 97.9,
+          "gap": 8.9,
+          "percentualGap": 10
+        },
+        {
+          "setor": "Reservas",
+          "producao": 360,
+          "producaoPotencial": 378,
+          "gap": 18,
+          "percentualGap": 5
+        }
+      ]
+    }
+  ],
+  "indicadores": {
+    "icbMedio": 99.39967474048443,
+    "cambioMedio": null,
+    "perdaBrasilTotal": null,
+    "melhorAno": {
+      "ano": 2021,
+      "icb": 134.18892733564013
+    },
+    "piorAno": {
+      "ano": 2000,
+      "icb": 60.312802768166094
+    },
+    "tendencia": "melhora"
+  },
+  "cenarios": [
+    {
+      "tipo": "pessimista",
+      "crescimentoAnual": 0.01,
+      "cambio2030": null,
+      "icb2030": 121.20967820069205,
+      "perdaBrasil2030": 1.5,
+      "empregos": 250000,
+      "pibAdicional": 0.5
+    },
+    {
+      "tipo": "base",
+      "crescimentoAnual": 0.03,
+      "cambio2030": null,
+      "icb2030": 133.96859169550174,
+      "perdaBrasil2030": 0.8,
+      "empregos": 750000,
+      "pibAdicional": 1.5
+    },
+    {
+      "tipo": "otimista",
+      "crescimentoAnual": 0.06,
+      "cambio2030": null,
+      "icb2030": 146.72750519031143,
+      "perdaBrasil2030": 0.2,
+      "empregos": 2000000,
+      "pibAdicional": 3.5
+    }
+  ],
+  "gerado_em": "2026-02-01T02:32:29.172Z"
+}

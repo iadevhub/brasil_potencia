@@ -1,0 +1,21 @@
+FASE 3 - PAINEL BRASIL POTÊNCIA
+═════════════════════════════════════════════════════════════════
+
+Data de Execução: 31/01/2026, 23:32:29
+Período Histórico: 2000-2024 (25 anos)
+
+ICB Médio: 99.40
+Câmbio Médio: R$ NaN/USD
+Perda Brasil Total: US$ NaN bi
+Tendência: MELHORA
+
+CENÁRIOS (2025-2030)
+───────────────────
+Pessimista: Câmbio 2030 R$ NaN/USD | PIB +50.0%
+Base:       Câmbio 2030 R$ NaN/USD | PIB +150.0%
+Otimista:   Câmbio 2030 R$ NaN/USD | PIB +350.0%
+
+Total série histórica: 25 pontos
+Arquivo JSON: dados-dashboard.json
+
+═════════════════════════════════════════════════════════════════
