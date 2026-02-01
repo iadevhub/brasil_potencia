@@ -11,6 +11,7 @@ interface IndexCardsProps {
     ano: number
     cambioReal: number
     cambioSimulado: number
+    cambioPotencial?: number
     icb: number
     perdaBrasil: number
     reservas: number
@@ -47,12 +48,13 @@ export function IndexCards({ data }: IndexCardsProps) {
         </CardContent>
       </Card>
 
-      {/* Real Simulado Card */}
+      {/* Câmbio Equilíbrio Card - Novo modelo */}
       <Card className="bg-card border-primary/30">
         <CardHeader className="pb-2 pt-3 px-3">
           <CardTitle className="text-xs font-medium text-muted-foreground flex items-center gap-1.5">
             <TrendingUp className="w-3.5 h-3.5 text-primary" />
-            Real Simulado
+            Cambio Equilibrio
+            <Badge variant="outline" className="text-[8px] px-1 py-0 ml-auto">PPP</Badge>
           </CardTitle>
         </CardHeader>
         <CardContent className="pb-3 px-3">
@@ -60,7 +62,7 @@ export function IndexCards({ data }: IndexCardsProps) {
             R$ {data.cambioSimulado.toFixed(2)}
           </div>
           <p className="text-[10px] text-muted-foreground mt-0.5">
-            Lastreado na cesta
+            Modelo: PPP + Balanca + Reservas
           </p>
         </CardContent>
       </Card>
