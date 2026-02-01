@@ -3,6 +3,10 @@ FROM node:20-alpine AS base
 # Install pnpm
 RUN corepack enable && corepack prepare pnpm@latest --activate
 
+# Build timestamp to invalidate cache
+ARG BUILD_DATE=2026-02-01
+ENV BUILD_DATE=${BUILD_DATE}
+
 FROM base AS deps
 WORKDIR /app
 COPY package.json pnpm-lock.yaml ./
